@@ -1,23 +1,66 @@
 <!doctype html>
 <html>
 <head>
-	<title>Silly Simple</title>
+	<title>URL Generator</title>
+	<link rel="stylesheet" type="text/css" href="style/global.css">
 	
 </head>
 <body>
-	<button id="silly">Do it</button>
-	<button id="clear">Clear</button>
-	<div id="results"></div>
+
+	<div id="IAUprod" class="orangeButton">IAU Prod</div> 
+	<div id="LIFEprod" class="orangeButton">LIFE Prod</div><br>
+	
+	<div id="IAUqa" class="orangeButton">IAU QA</div>
+	<div id="LIFEqa" class="orangeButton">LIFE QA</div><br>
+	
+	<div id="IAUdev" class="orangeButton">IAU Dev</div>
+	<div id="LIFEdev" class="orangeButton">LIFE Dev</div><br>
+
+	<br><br>
+
+	<input type="text" class="textInput" id="extraParam" value="?force="><br><br>
+	<div id="generateURL" class="orangeButton">Append</div> 
+	<div id="clear" class="orangeButton">Clear</div>
+	<div class="resultContainer"><a href="" id="result">SOME LINK HERE</a></div>
 	
 	<script src="js/zepto.js"></script>
-	<script src="js/silly.js"></script>
 	<script>
-	$('#silly').click(function(){
-		SILLY.DoIt($("#results"));
-	});
-	$('#clear').click(function(){
-		$("#results").html('');
-	});	
+		function setURL(url){
+			$("#result").attr('href', url);
+			$("#result").html(url);
+		}
+		$("#generateURL").click(function(){
+			var url =  $("#result").attr('href');
+				url += $("#extraParam").val();
+			setURL(url);
+		});
+		$("#IAUprod").click(function(){
+			var url = 'https://www.lmbinsurance.com/auto/';
+			setURL(url);
+		});	
+		$("#IAUqa").click(function(){
+			var url = 'https://iauqa1.lmbinsurance.com/auto/';
+			setURL(url);
+		});	
+		$("#IAUdev").click(function(){
+			var url = 'https://iauqa2.lmbinsurance.com/auto/';
+			setURL(url);
+		});	
+		$("#LIFEprod").click(function(){
+			var url = 'https://www.lmbinsurance.com/life/';
+			setURL(url);
+		});			
+		$("#LIFEqa").click(function(){
+			var url = 'https://iauqa1.lmbinsurance.com/life/';
+			setURL(url);
+		});	
+		$("#LIFEdev").click(function(){
+			var url = 'https://iauqa2.lmbinsurance.com/life/';
+			setURL(url);
+		});			
+		$("#clear").click(function(){
+			setURL('');
+		});
 	</script>
 </body>
 </html>
