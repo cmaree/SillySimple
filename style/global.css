@@ -1,3 +1,7 @@
+a{
+	font-family: arial;
+	font-size: 23px;
+}
 body{
 	text-align:center;
 }
@@ -64,8 +68,7 @@ body{
 	border: 1px solid #fb9e25;
 	border-radius: 5px;
 	font-size:20px;
-	min-height: 200px;
 	white-space: pre-wrap; /* css-3 */    
     word-wrap: break-word; /* Internet Explorer 5.5+ */
-	padding-top: 50px;
+	padding: 50px 10px;
 }
