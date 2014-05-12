@@ -7,60 +7,28 @@
 </head>
 <body>
 
-	<div id="IAUprod" class="orangeButton">IAU Prod</div> 
-	<div id="LIFEprod" class="orangeButton">LIFE Prod</div><br>
-	
-	<div id="IAUqa" class="orangeButton">IAU QA</div>
-	<div id="LIFEqa" class="orangeButton">LIFE QA</div><br>
-	
-	<div id="IAUdev" class="orangeButton">IAU Dev</div>
-	<div id="LIFEdev" class="orangeButton">LIFE Dev</div><br>
+	<div class="headline"></div> <br>
 
-	<br><br>
-
-	<input type="text" class="textInput" id="extraParam" value="?force="><br><br>
-	<div id="generateURL" class="orangeButton">Append</div> 
-	<div id="clear" class="orangeButton">Clear</div>
+	<input type="text" class="textInput" id="urlBox" value="https://www."><br><br>	
+	
 	<div class="resultContainer"><a href="" id="result"><span style="color:grey;">Please click on an environment button. <br> You can choose to append parameters as well.</span></a></div>
 	
 	<script src="js/zepto.js"></script>
+	<script src="js/autocompletion.js"></script>
 	<script>
+	
 		function setURL(url){
 			$("#result").attr('href', url);
 			$("#result").html(url);
 		}
-		$("#generateURL").click(function(){
-			var url =  $("#result").attr('href');
-				url += $("#extraParam").val();
+		
+		setURL( $("#urlBox").val());
+		$("#urlBox").on('keyup',function(){
+			var url =  $("#urlBox").val();			
 			setURL(url);
 		});
-		$("#IAUprod").click(function(){
-			var url = 'https://www.lmbinsurance.com/auto/';
-			setURL(url);
-		});	
-		$("#IAUqa").click(function(){
-			var url = 'https://iauqa1.lmbinsurance.com/auto/';
-			setURL(url);
-		});	
-		$("#IAUdev").click(function(){
-			var url = 'https://iauqa2.lmbinsurance.com/auto/';
-			setURL(url);
-		});	
-		$("#LIFEprod").click(function(){
-			var url = 'https://www.lmbinsurance.com/life/';
-			setURL(url);
-		});			
-		$("#LIFEqa").click(function(){
-			var url = 'https://iauqa1.lmbinsurance.com/life/';
-			setURL(url);
-		});	
-		$("#LIFEdev").click(function(){
-			var url = 'https://iauqa2.lmbinsurance.com/life/';
-			setURL(url);
-		});			
-		$("#clear").click(function(){
-			setURL('');
-		});
+	
+		$('#urlBox').autoComplete({data: ['https://www.lmbinsurance.com/auto/?force=', 'https://www.lmbinsurance.com/life/?force=', 'https://iauqa1.lmbinsurance.com/auto/?force=', 'https://iauqa1.lmbinsurance.com/life/?force=', 'https://iauqa2.lmbinsurance.com/auto/?force=', 'https://iauqa2.lmbinsurance.com/life/?force=', 'https://www.lowermybills.com/lending/home-refinance/?force=', 'https://iauqa1.lowermybills.com/lending/home-refinance/?force=', 'https://iauqa6.lowermybills.com/lending/home-refinance/?force=', 'https://www.classesusa.com/schools/?force=' ], maxOptions: 5, scrollable: true});
 	</script>
 </body>
 </html>
