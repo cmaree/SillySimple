@@ -4,6 +4,16 @@ a{
 }
 body{
 	text-align:center;
+	white-space: nowrap;
+}
+
+.headline{
+	background-image: url("../img/headline.png");
+	width: 290px;
+	height: 68px;
+	text-align: center;
+	display: inline-block;
+	margin-bottom: 20px;
 }
 .orangeButton {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
@@ -32,7 +42,7 @@ body{
 	font-style:normal;
 	height:55px;
 	line-height:55px;
-	width:120px;
+	width:40px;
 	text-decoration:none;
 	text-align:center;
 	text-shadow:0px 2px 0px #cc9f52;
@@ -57,11 +67,10 @@ body{
 	top:9px;
 }
 .textInput{
-	border: 1px solid #fb9e25;
+	border: 1px solid #383838;
 	width: 300px;
 	height: 50px;
-	font-size: 30px;
-	border-radius:5px;
+	font-size: 20px;
 }
 .resultContainer{
 	text-align:center;

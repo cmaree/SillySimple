@@ -9,8 +9,9 @@
 
 	<div class="headline"></div> <br>
 
-	<input type="text" class="textInput" id="urlBox" value="https://www."><br><br>	
-	
+	<input type="text" class="textInput" id="urlBox" value="https://www.">
+	<div id="clear" class="orangeButton">X</div>
+	<br><br><br>
 	<div class="resultContainer"><a href="" id="result"><span style="color:grey;">Please click on an environment button. <br> You can choose to append parameters as well.</span></a></div>
 	
 	<script src="js/zepto.js"></script>
@@ -27,6 +28,12 @@
 			var url =  $("#urlBox").val();			
 			setURL(url);
 		});
+
+		$("#clear").click(function(){
+			setURL('');
+			$("#urlBox").val('');
+			$('#urlBox').focus();
+		});		
 	
 		$('#urlBox').autoComplete({data: ['https://www.lmbinsurance.com/auto/?force=', 'https://www.lmbinsurance.com/life/?force=', 'https://iauqa1.lmbinsurance.com/auto/?force=', 'https://iauqa1.lmbinsurance.com/life/?force=', 'https://iauqa2.lmbinsurance.com/auto/?force=', 'https://iauqa2.lmbinsurance.com/life/?force=', 'https://www.lowermybills.com/lending/home-refinance/?force=', 'https://iauqa1.lowermybills.com/lending/home-refinance/?force=', 'https://iauqa6.lowermybills.com/lending/home-refinance/?force=', 'https://www.classesusa.com/schools/?force=' ], maxOptions: 5, scrollable: true});
 	</script>
