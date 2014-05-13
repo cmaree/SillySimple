@@ -5,6 +5,7 @@ a{
 body{
 	text-align:center;
 	white-space: nowrap;
+	margin: 0px;
 }
 
 .headline{
@@ -57,6 +58,15 @@ body{
 	position:relative;
 	top:1px;
 }
+.buttonSelected{
+	border: 4px red solid;
+}
+.bottomMenu, .urlLinks{
+	width: 20%;
+}
+.bottomMenu{
+	border-radius: 0%;
+}
 .lifeButtons{
 	position: absolute;
 	top: 8px;
@@ -68,7 +78,7 @@ body{
 }
 .textInput{
 	border: 1px solid #383838;
-	width: 300px;
+	min-width: 250px;
 	height: 50px;
 	font-size: 20px;
 }
@@ -80,4 +90,11 @@ body{
 	white-space: pre-wrap; /* css-3 */    
     word-wrap: break-word; /* Internet Explorer 5.5+ */
 	padding: 50px 10px;
+}
+.menu{
+    position: fixed;
+    bottom: 0;
+    width:99%;    
+    background: #ededed;
+    padding-top: 11px;
 }
