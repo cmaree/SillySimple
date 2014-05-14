@@ -2,12 +2,12 @@ function setURL(url){
 	$("#result").attr('href', url);	
 	$("#result").html(url);
 	$("#urlBox").val(url);	
-	$('#urlBox').focus();
+//	$('#urlBox').focus();
 }
 
 function clear(){
-	setURL('https://www.');
-	$("#urlBox").val('https://www.');
+	setURL('');
+	$("#urlBox").val('');
 	$('#urlBox').focus();
 }
 
@@ -19,7 +19,7 @@ function genericClick(url){
 
 /* Init functions */
 setURL( $("#urlBox").val());
-$("#autoPanel, #lifePanel, #lendingPanel, #eduPanel").hide();
+$("#autoPanel, #lifePanel, #lrePanel, #eduPanel").hide();
 		
 $("#urlBox").on('keyup',function(){
 	var url =  $("#urlBox").val();			

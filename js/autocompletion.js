@@ -78,6 +78,8 @@
         if (storage.find('div').length)  {
           current = storage.find('div:first-child');
           current.css('background', settings.currentBackground);
+     //     current.css('font-size', '23px');
+     //     current.css('padding-bottom', '3px');          
           storage.show();
         }
       }

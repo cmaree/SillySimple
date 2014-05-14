@@ -59,7 +59,7 @@ body{
 	top:1px;
 }
 .buttonSelected{
-	border: 4px red solid;
+	border: 1px #4073eb solid;
 }
 .bottomMenu, .urlLinks{
 	width: 20%;
@@ -81,9 +81,12 @@ body{
 	min-width: 250px;
 	height: 50px;
 	font-size: 20px;
+	margin: 50px 0 0 0;
 }
 .resultContainer{
 	text-align:center;
+	width:80%;
+	display:inline-block;
 	border: 1px solid #fb9e25;
 	border-radius: 5px;
 	font-size:20px;
@@ -97,4 +100,7 @@ body{
     width:99%;    
     background: #ededed;
     padding-top: 11px;
+}
+a{
+	color: #fff;
 }
