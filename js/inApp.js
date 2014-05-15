@@ -28,10 +28,9 @@ $("#urlBox").on('keyup',function(){
 
 $("#auto, #life, #home, #lre, #edu").on('click', function(e){
 	clear();
-	$("#auto, #life, #home, #lre, #edu").removeClass('buttonSelected');
 	$("#autoPanel, #lifePanel, #homePanel, #lrePanel, #eduPanel").hide();
-	$("#"+this.id).addClass('buttonSelected');
 	$("#"+this.id+"Panel").show();
+	$("#urlBox").blur();
 });
 
 $("#clear").click(function(){
