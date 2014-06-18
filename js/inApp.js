@@ -19,7 +19,7 @@ function genericClick(url){
 
 /* Init functions */
 setURL( $("#urlBox").val());
-$("#autoPanel, #lifePanel, #lrePanel, #eduPanel").hide();
+//$("#autoPanel, #lifePanel, #lrePanel, #eduPanel").hide();
 		
 $("#urlBox").on('keyup',function(){
 	var url =  $("#urlBox").val();			
