@@ -3,19 +3,19 @@
   	init:    function(options) {
   		var settings = $.extend({
   			data:   [],
-  			height: 20,
+  			height: 25,
         maxOptions: 100,
         scrollable: true,
         optionBackground:    '#FFFFFF',
-        currentBackground:   '#EBE1E5'
-        //mouseOverBackground: '#F7F0F3'
+        currentBackground:   '#EBE1E5',
+        mouseOverBackground: '#F7F0F3'
   		}, options);
 
   		var $this = this;
-      //Для контроля инициализации
+
       var data = $this[0].externalData;
       var current = null;
-  		//если не проинициализирован для данного элемента
+
   		if (!data) {
         console.log('init')
         createStorage();
@@ -54,10 +54,11 @@
       function closeStorage() {
         var storage = $this[0].externalData.storage;
         storage[0].scrollTop = 0;
-        storage.hide();
+        storage.hide(); 
       }
       function chooseRecord(e) {
-        $this.val(e.target.innerHTML)
+        $this.val(e.target.innerHTML);
+        setURL( $("#urlBox").val());        
       }
 
       function computeStorage() {
@@ -77,6 +78,8 @@
         if (storage.find('div').length)  {
           current = storage.find('div:first-child');
           current.css('background', settings.currentBackground);
+     //     current.css('font-size', '23px');
+     //     current.css('padding-bottom', '3px');          
           storage.show();
         }
       }
@@ -105,7 +108,7 @@
         }
       }
 
-  		//создание дива с подсказками
+
   		function keyHandler(e) {
         var storage  = $this[0].externalData.storage;
         var settings = $this[0].externalData.settings;
@@ -169,9 +172,9 @@
         }
         return Object.keys(obj);
       }
-      //если не массив
+
       if (Object.prototype.toString.call(field) != '[object Array]') {
-        //попробуем превратить в массив
+
         field = [field];
       }
 
@@ -195,7 +198,7 @@
     } else if ( typeof method === 'object' || ! method ) {
       return methods.init.apply( this, arguments );
     } else {
-      $.error( 'Метод с именем ' +  method + ' не существует для Zepto.autocomplete' );
+      $.error( 'error ' +  method + 'Zepto.autocomplete' );
     }
   }
 

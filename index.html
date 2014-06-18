@@ -3,39 +3,104 @@
 <head>
 	<title>URL Generator</title>
 	<link rel="stylesheet" type="text/css" href="style/global.css">
+	<link rel="stylesheet" type="text/css" href="style/onsen.css">
 	
 </head>
 <body>
 
-	<div class="headline"></div> <br>
+	
+	<div class="navigation-bar">
+	  <div class="navigation-bar__center">
+	    <!-- <span class="navigation-bar__title headline"></span> -->
+        <h1 class="navigation-bar__title">CDM In-App Browser</h1>
+	  </div>
+	</div>	
+	
 
-	<input type="text" class="textInput" id="urlBox" value="https://www.">
-	<div id="clear" class="orangeButton">X</div>
+
+
+    <!-- AUTO  -->
+    <div id="autoPanel" class="grid-menu">
+        <div id="IAUprod" class="button urlLinks">Prod</div>
+        <div id="IAUqa" class="button urlLinks">QA</div>
+	    <div id="IAUdev" class="button urlLinks">Dev</div>
+
+	    
+	    
+
+  
+    </div>
+    
+    <!-- LIFE  -->
+    <div id="lifePanel">
+        <div id="LIFEprod" class="button urlLinks">Prod</div>
+        <div id="LIFEqa" class="button urlLinks">QA</div>
+        <div id="LIFEdev" class="button urlLinks">Dev</div>
+        
+    </div>
+    
+    <!-- LENDING  -->
+    <div id="lrePanel">
+        <div id="LENDprod" class="button urlLinks">Prod</div>
+        <div id="LENDqa" class="button urlLinks">QA</div>
+        <div id="LENDdev" class="button urlLinks">Dev</div>
+        
+    </div>
+    
+    <!-- EDU  -->
+    <div id="eduPanel">
+        <div id="EDUprod" class="button urlLinks">Prod</div>
+        <div id="EDUqa" class="button urlLinks">QA</div>
+        <div id="EDUdev" class="button urlLinks">Dev</div>
+        
+    </div>            
+    
+	<input type="text" type="number" class="textInput" id="urlBox" value="https://www." onfocus="this.value = this.value;">
+	
+	<div id="clear" class="button">X</div>
 	<br><br><br>
 	<div class="resultContainer"><a href="" id="result"><span style="color:grey;">Please click on an environment button. <br> You can choose to append parameters as well.</span></a></div>
 	
+	<div class="tab-bar">
+	
+	  <label class="tab-bar__item" id="auto">
+	    <input type="radio" name="tab-bar-c">
+	    <button class="tab-bar__button">
+	      <div class="tab-bar__label">Auto</div>
+	    </button>
+	  </label>
+      <label class="tab-bar__item" id="life">
+        <input type="radio" name="tab-bar-c">
+        <button class="tab-bar__button">
+          <div class="tab-bar__label">LIFE</div>
+        </button>
+      </label>
+      <label class="tab-bar__item" id="lre">
+        <input type="radio" name="tab-bar-c">
+        <button class="tab-bar__button">
+          <div class="tab-bar__label">LRE</div>
+        </button>
+      </label>
+      <label class="tab-bar__item" id="edu">
+        <input type="radio" name="tab-bar-c">
+        <button class="tab-bar__button">
+          <div class="tab-bar__label">EDU</div>
+        </button>
+      </label>      	
+	
+	<!-- 
+		<span class="button bottomMenu" id="auto">Auto</span>
+		<span class="button bottomMenu" id="life">LIFE</span>
+	<!--<span class="button bottomMenu" id="home">Home</span>
+		<span class="button bottomMenu" id="lre">LRE</span>
+		<span class="button bottomMenu" id="edu">EDU</span>
+		 -->	
+	</div>
 	<script src="js/zepto.js"></script>
 	<script src="js/autocompletion.js"></script>
+	<script src="js/inApp.js"></script>
 	<script>
 	
-		function setURL(url){
-			$("#result").attr('href', url);
-			$("#result").html(url);
-		}
-		
-		setURL( $("#urlBox").val());
-		$("#urlBox").on('keyup',function(){
-			var url =  $("#urlBox").val();			
-			setURL(url);
-		});
-
-		$("#clear").click(function(){
-			setURL('');
-			$("#urlBox").val('');
-			$('#urlBox').focus();
-		});		
-	
-		$('#urlBox').autoComplete({data: ['https://www.lmbinsurance.com/auto/?force=', 'https://www.lmbinsurance.com/life/?force=', 'https://iauqa1.lmbinsurance.com/auto/?force=', 'https://iauqa1.lmbinsurance.com/life/?force=', 'https://iauqa2.lmbinsurance.com/auto/?force=', 'https://iauqa2.lmbinsurance.com/life/?force=', 'https://www.lowermybills.com/lending/home-refinance/?force=', 'https://iauqa1.lowermybills.com/lending/home-refinance/?force=', 'https://iauqa6.lowermybills.com/lending/home-refinance/?force=', 'https://www.classesusa.com/schools/?force=' ], maxOptions: 5, scrollable: true});
 	</script>
 </body>
 </html>
