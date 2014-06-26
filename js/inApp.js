@@ -1,5 +1,5 @@
 function setURL(url){
-	$("#result").attr('href', url);	
+//	$("#result").attr('href', ');	
 	$("#result").html(url);
 	$("#urlBox").val(url);	
 //	$('#urlBox').focus();
@@ -17,9 +17,11 @@ function genericClick(url){
 }
 
 
+
+
 /* Init functions */
 setURL( $("#urlBox").val());
-//$("#autoPanel, #lifePanel, #lrePanel, #eduPanel").hide();
+
 		
 $("#urlBox").on('keyup',function(){
 	var url =  $("#urlBox").val();			
@@ -37,6 +39,12 @@ $("#clear").click(function(){
 	clear();
 });		
 
+// Link on the container page has been clicked
+// Make it behave as-if its <a href> link
+$("#result").click(function(){
+	 var url = $("#result").text();
+	 var ref = window.open(url, '_blank', 'location=yes');
+});
 
 /* AUTO apps */
 $("#IAUprod").click(function(){	genericClick('https://www.lmbinsurance.com/auto/?force=');});	

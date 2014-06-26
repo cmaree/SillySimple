@@ -4,11 +4,30 @@
 	<title>URL Generator</title>
 	<link rel="stylesheet" type="text/css" href="style/global.css">
 	<link rel="stylesheet" type="text/css" href="style/onsen.css">
-	
+	<script type="text/javascript" charset="utf-8" src="cordova-2.4.0.js"></script>
 </head>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+         var ref = window.open('http://apache.org', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+         ref.addEventListener('exit', function() { alert(event.type); });
+    }
+
+    </script>
+
 <body>
 
-	
+	<div data-role="header">
+ <a class="ui-btn-left" data-icon="arrow-l" href="javascript:history.back(1) " data-theme="a">Back</a>
+</div>
 	<div class="navigation-bar">
 	  <div class="navigation-bar__center">
 	    <!-- <span class="navigation-bar__title headline"></span> -->
@@ -54,7 +73,7 @@
 	
 	<div id="clear" class="button">X</div>
 	<br><br><br>
-	<div class="resultContainer"><a href="" id="result"><span style="color:grey;">Please click on an environment button. <br> You can choose to append parameters as well.</span></a></div>
+	<div class="resultContainer"><span href="" id="result"><span style="color:grey;">Please click on an environment button. <br> You can choose to append parameters as well.</span></span></div>
 <span style="display:none;">	
 	<div class="tab-bar">
 	
@@ -83,8 +102,7 @@
         </button>
       </label>      	
 	
-	<!-- 
-		<span class="button bottomMenu" id="auto">Auto</span>
+	<!--<span class="button bottomMenu" id="auto">Auto</span>
 		<span class="button bottomMenu" id="life">LIFE</span>
 	<!--<span class="button bottomMenu" id="home">Home</span>
 		<span class="button bottomMenu" id="lre">LRE</span>
@@ -92,11 +110,11 @@
 		 -->	
 	</div>
 </span>
+	
 	<script src="js/zepto.js"></script>
 	<script src="js/autocompletion.js"></script>
 	<script src="js/inApp.js"></script>
-	<script>
 	
-	</script>
+    
 </body>
 </html>
