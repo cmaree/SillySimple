@@ -58,12 +58,12 @@ $("#LIFEdev").click(function(){genericClick('https://iauqa2.lmbinsurance.com/lif
 
 /* EDU apps */
 $("#EDUprod").click(function(){	genericClick('https://www.classesusa.com/schools/?force=');});	
-$("#EDUqa").click(function(){ genericClick('');});	
-$("#EDUdev").click(function(){genericClick('');});	
+$("#EDUqa").click(function(){ genericClick('http://eduqa1.classesusa.com/schools/?force=');});	
+$("#EDUdev").click(function(){genericClick('http://eduqa2.classesusa.com/schools/?force=');});	
 
 /* LENDING apps */
-$("#LENDprod").click(function(){genericClick('https://www.lmbinsurance.com/life/?force=');});			
-$("#LENDqa").click(function(){genericClick('https://iauqa1.lmbinsurance.com/life/?force=');});	
-$("#LENDdev").click(function(){genericClick('https://iauqa2.lmbinsurance.com/life/?force=');});
+$("#LENDprod").click(function(){genericClick('https://www.lowermybills.com/lending/home-refinance?force=');});			
+$("#LENDqa").click(function(){genericClick('http://lmbqa1.lowermybills.com/lending/home-refinance?force=');});	
+$("#LENDdev").click(function(){genericClick('http://lmbqa6.lowermybills.com/lending/home-refinance?force=');});
 	
 $('#urlBox').autoComplete({data: ['https://www.lmbinsurance.com/auto/?force=', 'https://www.lmbinsurance.com/life/?force=', 'https://iauqa1.lmbinsurance.com/auto/?force=', 'https://iauqa1.lmbinsurance.com/life/?force=', 'https://iauqa2.lmbinsurance.com/auto/?force=', 'https://iauqa2.lmbinsurance.com/life/?force=', 'https://www.lowermybills.com/lending/home-refinance/?force=', 'https://iauqa1.lowermybills.com/lending/home-refinance/?force=', 'https://iauqa6.lowermybills.com/lending/home-refinance/?force=', 'https://www.classesusa.com/schools/?force=' ], maxOptions: 5, scrollable: true});
