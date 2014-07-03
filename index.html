@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
 <head>
-	<title>URL Generator</title>
-	<link rel="stylesheet" type="text/css" href="style/global.css">
-	<link rel="stylesheet" type="text/css" href="style/onsen.css">
-	<script type="text/javascript" charset="utf-8" src="cordova-2.4.0.js"></script>
+    <title>URL Generator</title>
+    <link rel="stylesheet" type="text/css" href="style/global.css">
+    <link rel="stylesheet" type="text/css" href="style/onsen.css">
+    <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
 </head>
     <script type="text/javascript" charset="utf-8">
 
@@ -25,64 +25,64 @@
 
 <body>
 
-	<div data-role="header">
+    <div data-role="header">
  <a class="ui-btn-left" data-icon="arrow-l" href="javascript:history.back(1) " data-theme="a">Back</a>
 </div>
-	<div class="navigation-bar">
-	  <div class="navigation-bar__center">
-	    <!-- <span class="navigation-bar__title headline"></span> -->
+    <div class="navigation-bar">
+      <div class="navigation-bar__center">
+        <!-- <span class="navigation-bar__title headline"></span> -->
         <h1 class="navigation-bar__title">CDM In-App Browser</h1>
-	  </div>
-	</div>	
-	
+      </div>
+    </div>  
+    
 
     <!-- AUTO  -->
     <div id="autoPanel" class="grid-menu">
-		<span class="verticalName">AUTO</span>
+        <span class="verticalName">AUTO</span>
         <div id="IAUprod" class="button urlLinks">Prod</div>
         <div id="IAUqa" class="button urlLinks">QA</div>
-	    <div id="IAUdev" class="button urlLinks">Dev</div>
+        <div id="IAUdev" class="button urlLinks">Dev</div>
     </div>
-	<br>
+    <br>
     
     <!-- LIFE  -->
     <div id="lifePanel">
-		<span class="verticalName">LIFE</span>
+        <span class="verticalName">LIFE</span>
         <div id="LIFEprod" class="button urlLinks">Prod</div>
         <div id="LIFEqa" class="button urlLinks">QA</div>
         <div id="LIFEdev" class="button urlLinks">Dev</div>        
     </div>
-	<br>    
+    <br>    
     <!-- LENDING  -->
     <div id="lrePanel">
-		<span class="verticalName">LEND</span>
+        <span class="verticalName">LEND</span>
         <div id="LENDprod" class="button urlLinks">Prod</div>
         <div id="LENDqa" class="button urlLinks">QA</div>
         <div id="LENDdev" class="button urlLinks">Dev</div>        
     </div>
-	<br>    
+    <br>    
     <!-- EDU  -->
     <div id="eduPanel">
-		<span class="verticalName">EDU</span>
+        <span class="verticalName">EDU</span>
         <div id="EDUprod" class="button urlLinks">Prod</div>
         <div id="EDUqa" class="button urlLinks">QA</div>
         <div id="EDUdev" class="button urlLinks">Dev</div>        
     </div>            
-	<br>    
-	<input type="text" type="number" class="textInput" id="urlBox" value="https://www." onfocus="this.value = this.value;">
-	
-	<div id="clear" class="button">X</div>
-	<br><br><br>
-	<div class="resultContainer"><span href="" id="result"><span style="color:grey;">Please click on an environment button. <br> You can choose to append parameters as well.</span></span></div>
-<span style="display:none;">	
-	<div class="tab-bar">
-	
-	  <label class="tab-bar__item" id="auto">
-	    <input type="radio" name="tab-bar-c">
-	    <button class="tab-bar__button">
-	      <div class="tab-bar__label">Auto</div>
-	    </button>
-	  </label>
+    <br>    
+    <input type="text" type="number" class="textInput" id="urlBox" value="https://www." onfocus="this.value = this.value;">
+    
+    <div id="clear" class="button">X</div>
+    <br><br><br>
+    <div class="resultContainer"><span href="" id="result"><span style="color:grey;">Please click on an environment button. <br> You can choose to append parameters as well.</span></span></div>
+<span style="display:none;">    
+    <div class="tab-bar">
+    
+      <label class="tab-bar__item" id="auto">
+        <input type="radio" name="tab-bar-c">
+        <button class="tab-bar__button">
+          <div class="tab-bar__label">Auto</div>
+        </button>
+      </label>
       <label class="tab-bar__item" id="life">
         <input type="radio" name="tab-bar-c">
         <button class="tab-bar__button">
@@ -100,21 +100,21 @@
         <button class="tab-bar__button">
           <div class="tab-bar__label">EDU</div>
         </button>
-      </label>      	
-	
-	<!--<span class="button bottomMenu" id="auto">Auto</span>
-		<span class="button bottomMenu" id="life">LIFE</span>
-	<!--<span class="button bottomMenu" id="home">Home</span>
-		<span class="button bottomMenu" id="lre">LRE</span>
-		<span class="button bottomMenu" id="edu">EDU</span>
-		 -->	
-	</div>
+      </label>          
+    
+    <!--<span class="button bottomMenu" id="auto">Auto</span>
+        <span class="button bottomMenu" id="life">LIFE</span>
+    <!--<span class="button bottomMenu" id="home">Home</span>
+        <span class="button bottomMenu" id="lre">LRE</span>
+        <span class="button bottomMenu" id="edu">EDU</span>
+         -->    
+    </div>
 </span>
-	
-	<script src="js/zepto.js"></script>
-	<script src="js/autocompletion.js"></script>
-	<script src="js/inApp.js"></script>
-	
+    
+    <script src="js/zepto.js"></script>
+    <script src="js/autocompletion.js"></script>
+    <script src="js/inApp.js"></script>
+    
     
 </body>
 </html>
