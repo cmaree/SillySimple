@@ -1,7 +1,7 @@
 function setURL(url){
-//	$("#result").attr('href', ');	
+	$("#result").attr('href', url);	
 	$("#result").html(url);
-	$("#urlBox").val(url);	
+//	$("#urlBox").val(url);	
 //	$('#urlBox').focus();
 }
 
