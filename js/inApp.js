@@ -1,8 +1,11 @@
 function setURL(url){
-//	$("#result").attr('href', url);	
+
+/*  One of the two must be commented */	
+/*  Comment this line for android, and uncomment for iphone */	
+	$("#result").attr('href', url);
+	
 	$("#result").html(url);
-	$("#urlBox").val(url);	
-//	$('#urlBox').focus();
+	$("#urlBox").val(url);		
 }
 
 function clear(){
